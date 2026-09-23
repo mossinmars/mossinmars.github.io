@@ -149,14 +149,17 @@ const marscoinFlapUrl = 'https://flap.sh/bnb/0xfe189e97832da1573e4e4ff034f4ffc3a
               <div class="expedition-features">
                 <article class="expedition-feature">
                   <img class="expedition-feature-art" src="/assets/expedition-card-scarce.png" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+                  <span class="expedition-feature-badge" aria-hidden="true"><img src="/assets/marscoin-official-icon.png" alt="" width="38" height="38" /></span>
                   <div class="expedition-feature-copy"><span class="feature-index">01 / SURVIVE</span><h3>SCARCE<br />MARSCOIN</h3><p>Find the next coin before MOSS runs out of power.</p></div>
                 </article>
                 <article class="expedition-feature">
                   <img class="expedition-feature-art" src="/assets/expedition-card-leaderboard.png" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+                  <span class="expedition-feature-badge" aria-hidden="true"><span class="expedition-feature-icon trophy-icon"></span></span>
                   <div class="expedition-feature-copy"><span class="feature-index">02 / COMPETE</span><h3>DAILY<br />LEADERBOARD</h3><p>Every day brings a fresh race across Mars.</p></div>
                 </article>
                 <article class="expedition-feature">
                   <img class="expedition-feature-art" src="/assets/expedition-card-rewards.png" alt="" width="1672" height="941" loading="lazy" decoding="async" />
+                  <span class="expedition-feature-badge" aria-hidden="true"><span class="expedition-feature-icon gift-icon"></span></span>
                   <div class="expedition-feature-copy"><span class="feature-index">03 / WIN</span><h3>TOP SCORE.<br />DAILY REWARD.</h3><p>The highest score takes the day's reward.</p></div>
                 </article>
               </div>
@@ -348,7 +351,13 @@ const marscoinFlapUrl = 'https://flap.sh/bnb/0xfe189e97832da1573e4e4ff034f4ffc3a
   .expedition-feature::before { content:""; position:absolute; inset:2px; z-index:0; background:#121319; clip-path:polygon(0 15px,15px 0,calc(100% - 15px) 0,100% 15px,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 calc(100% - 15px)); }
   .expedition-feature::after { content:""; position:absolute; inset:2px; z-index:1; pointer-events:none; background:linear-gradient(90deg,transparent 17%,rgba(15,17,21,.2) 38%,rgba(15,17,21,.96) 63%,#111319 100%); }
   .expedition-feature-art { position:absolute; inset:2px; width:calc(100% - 4px); height:calc(100% - 4px); z-index:1; object-fit:cover; object-position:left center; clip-path:polygon(0 15px,15px 0,calc(100% - 15px) 0,100% 15px,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 calc(100% - 15px)); }
-  .expedition-feature-copy { position:relative; z-index:2; width:47%; margin-left:51%; padding:12px 15px 12px 0; text-shadow:0 2px 8px #09090c; }
+  .expedition-feature-badge { position:absolute; z-index:3; top:50%; left:46%; transform:translate(-50%,-50%); width:62px; height:62px; display:grid; place-items:center; background:linear-gradient(135deg,#ffbc71,#9d502d); clip-path:polygon(25% 0,75% 0,100% 25%,100% 75%,75% 100%,25% 100%,0 75%,0 25%); filter:drop-shadow(0 0 13px rgba(255,130,40,.55)); }
+  .expedition-feature-badge::before { content:""; position:absolute; inset:2px; background:#201716; clip-path:polygon(25% 0,75% 0,100% 25%,100% 75%,75% 100%,25% 100%,0 75%,0 25%); }
+  .expedition-feature-badge img,.expedition-feature-icon { position:relative; z-index:1; width:34px; height:34px; object-fit:contain; }
+  .expedition-feature-icon { display:block; background:#ffda8d; mask-size:contain; mask-position:center; mask-repeat:no-repeat; }
+  .trophy-icon { mask-image:url('/assets/expedition-trophy.svg'); }
+  .gift-icon { mask-image:url('/assets/expedition-gift.svg'); }
+  .expedition-feature-copy { position:relative; z-index:2; width:40%; margin-left:59%; padding:12px 12px 12px 0; text-shadow:0 2px 8px #09090c; }
   .feature-index { display:block; margin-bottom:10px; color:#f0a87b; font-size:9px; font-weight:800; letter-spacing:.18em; }
   .expedition-feature h3 { margin:0 0 7px; color:#fff0e6; font:800 clamp(15px,1.5vw,24px)/1.12 'DM Sans',sans-serif; letter-spacing:.015em; }
   .expedition-feature p { margin:0; color:#dfc9c0; font-size:clamp(11px,.9vw,14px); line-height:1.37; }
@@ -387,7 +396,7 @@ const marscoinFlapUrl = 'https://flap.sh/bnb/0xfe189e97832da1573e4e4ff034f4ffc3a
     .mechanic-row p { font-size:12px; }
     .expedition-grid { grid-template-columns:1fr; }
     .expedition-features { grid-template-columns:1fr; grid-template-rows:repeat(3,178px); }
-    .expedition-feature-copy { width:47%; margin-left:51%; }
+    .expedition-feature-copy { width:40%; margin-left:59%; }
   }
   @media (max-width:700px) {
     .site-header { height:70px; padding:0 22px; }
@@ -460,7 +469,9 @@ const marscoinFlapUrl = 'https://flap.sh/bnb/0xfe189e97832da1573e4e4ff034f4ffc3a
     .expedition-preview-frame { aspect-ratio:1672/941; }
     .expedition-preview figcaption { padding:10px 4px 0; font-size:8px; letter-spacing:.09em; }
     .expedition-features { grid-template-columns:1fr; grid-template-rows:repeat(3,146px); gap:9px; }
-    .expedition-feature-copy { width:48%; margin-left:50%; padding-right:10px; }
+    .expedition-feature-copy { width:40%; margin-left:59%; padding-right:8px; }
+    .expedition-feature-badge { width:47px; height:47px; left:47%; }
+    .expedition-feature-badge img,.expedition-feature-icon { width:27px; height:27px; }
     .expedition-feature h3 { font-size:clamp(15px,4vw,20px); }
     .expedition-feature p { font-size:11px; }
     .expedition-footer { margin-top:22px; gap:10px; }
