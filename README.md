@@ -4,9 +4,9 @@ A static Astro page prepared for GitHub Pages. The X banner is used only as the 
 
 ## Design direction
 
-- **Visual thesis:** A warm, lonely Mars transmission with cinematic character art, quiet telemetry, and no generic crypto neon.
-- **Content plan:** MOSS introduction → lost-contact story → MarsCoin pairing → planned dividends → launch coordinates.
-- **Interaction thesis:** A gentle hero drift, scroll reveals, and a blinking mission-status signal. Motion is disabled for reduced-motion preferences.
+- **Visual thesis:** Warm Mars daylight gives way to MOSS's dark final frame, then a cyan reboot signal.
+- **Content plan:** MOSS introduction → battery reaches zero → MarsCoin restores him → his new search → planned dividends → launch coordinates.
+- **Interaction thesis:** A gentle hero drift, scroll reveals, and a battery meter that fills when the blackout scene enters view. Motion is disabled for reduced-motion preferences.
 
 ## Run and deploy
 
@@ -17,8 +17,9 @@ npm run build
 
 The build creates `dist/`. After changing the MOSS GitHub username to `mossinmars`, push the source to the account's `mossinmars.github.io` repository. The workflow in `.github/workflows/deploy.yml` builds and publishes the site through GitHub Pages at `https://mossinmars.github.io/`.
 
-## Pair-section artwork
+## Story artwork
 
+- [`moss-blackout.png`](public/assets/moss-blackout.png) is the supplied frame of MOSS at the moment his power goes out, used as the story section's background.
 - [`moss-discovers-marscoin.png`](public/assets/moss-discovers-marscoin.png) was made with the built-in image-generation tool using the supplied MOSS portrait and the existing MOSS hero as references. Prompt: "MOSS alone on a vast Mars plain discovers a small unmarked metallic artifact half buried in red dust. His eyes look down at it with curiosity; his cyan rover light catches its edge. Compose a cinematic wide scene with MOSS on the right, dark mauve sky and uncluttered left space for live typography. Preserve the cream square rover head, blue eyes, cyan mouth light, rusty body, solar panels, and wheels. No emblem, lettering, icon, coin branding, or UI."
 - [`marscoin-official-icon.png`](public/assets/marscoin-official-icon.png) is the actual icon served by [MarsCoin's website](https://www.marscoinbnb.com/assets/marscoin-official-icon.png). It is rendered separately in HTML so its identity is not altered by image generation.
 
