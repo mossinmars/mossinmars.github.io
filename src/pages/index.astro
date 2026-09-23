@@ -57,17 +57,10 @@ const marscoinFlapUrl = 'https://flap.sh/bnb/0xfe189e97832da1573e4e4ff034f4ffc3a
         </section>
 
         <section class="signal-section" id="story" aria-labelledby="story-title">
-          <div class="blackout-scene" aria-hidden="true"><img src="/assets/moss-blackout.png" alt="" loading="lazy" /></div>
+          <div class="blackout-scene" aria-hidden="true"><img src="/assets/moss-recharged.png" alt="" loading="lazy" /></div>
           <div class="section-frame">
             <p class="section-kicker">01 / THE LAST PERCENT</p>
             <div class="signal-content">
-              <div class="power-readout" role="img" aria-label="MOSS's battery fell from one percent to zero, then recharged to one hundred percent">
-                <span class="power-label" aria-hidden="true">PWR / LAST TRANSMISSION</span>
-                <div class="power-before" aria-hidden="true"><strong>01<span>%</span></strong><span class="power-arrow">→</span><strong>00<span>%</span></strong></div>
-                <div class="power-bar" aria-hidden="true"><span></span></div>
-                <span class="power-source" aria-hidden="true">UNKNOWN SOURCE DETECTED</span>
-                <strong class="power-after" aria-hidden="true">100<span>%</span></strong>
-              </div>
               <div class="story-copy">
                 <h2 id="story-title">MOSS DIED HERE.<br /><em>THE COIN DISAGREED.</em></h2>
                 <p>No signal. No sun. One percent left. MOSS stopped beside a strange object in the dust. His lights went out.</p>
@@ -79,7 +72,7 @@ const marscoinFlapUrl = 'https://flap.sh/bnb/0xfe189e97832da1573e4e4ff034f4ffc3a
         </section>
 
         <section class="pair-section" id="pair" aria-labelledby="pair-title">
-          <div class="pair-scene" aria-hidden="true"><img src="/assets/moss-discovers-marscoin.png" alt="" loading="lazy" /></div>
+          <div class="pair-scene" aria-hidden="true"><img src="/assets/moss-finds-marscoin-blue-sunset.png" alt="" loading="lazy" /></div>
           <div class="section-frame pair-layout">
             <div class="pair-copy">
               <p class="section-kicker">02 / THE NEW MISSION</p>
@@ -101,6 +94,18 @@ const marscoinFlapUrl = 'https://flap.sh/bnb/0xfe189e97832da1573e4e4ff034f4ffc3a
               <p class="section-kicker">03 / WHAT HE BRINGS BACK</p>
               <h2 id="rewards-title">WHAT HE FINDS,<br /><em>HE SHARES.</em></h2>
               <p>Planned for launch: 2.5% MarsCoin dividends to MOSS holders. MOSS hunts the coin that keeps him moving; the crew shares what he finds.</p>
+              <div class="dividend-scenarios">
+                <table>
+                  <caption>What a 2.5% dividend pool could look like</caption>
+                  <thead><tr><th scope="col">Eligible volume</th><th scope="col">Illustrative pool</th></tr></thead>
+                  <tbody>
+                    <tr><td>$1M</td><td>$25K</td></tr>
+                    <tr><td>$10M</td><td>$250K</td></tr>
+                    <tr><td>$100M</td><td>$2.5M</td></tr>
+                  </tbody>
+                </table>
+                <p class="scenario-note">2.5% × eligible volume, shown as a total USD equivalent. Actual MarsCoin distributed depends on launch settings, fees and swaps. These are not per-holder payouts.</p>
+              </div>
               <div class="reward-asset"><img src="/assets/marscoin-official-icon.png" alt="" loading="lazy" /><span>DIVIDENDS IN<br />MARSCOIN</span></div>
             </div>
           </div>
@@ -207,25 +212,13 @@ const marscoinFlapUrl = 'https://flap.sh/bnb/0xfe189e97832da1573e4e4ff034f4ffc3a
   .section-kicker { color:var(--dust); margin-bottom:68px; }
   .signal-section { min-height:820px; position:relative; padding:112px 0 126px; background:#0c101d; overflow:hidden; isolation:isolate; display:flex; align-items:center; }
   .blackout-scene { position:absolute; inset:0; z-index:-2; }
-  .blackout-scene img { display:block; width:100%; height:100%; object-fit:cover; object-position:50% 61%; filter:brightness(.9) contrast(1.08); }
+  .blackout-scene img { display:block; width:100%; height:100%; object-fit:cover; object-position:48% 58%; filter:brightness(.9) contrast(1.08); }
   .signal-section::after { content:""; position:absolute; inset:0; z-index:-1; pointer-events:none; background:linear-gradient(90deg,rgba(9,13,25,.3) 0%,rgba(9,13,25,.16) 42%,rgba(9,13,25,.78) 66%,rgba(9,13,25,.9) 100%),linear-gradient(0deg,#10111c 0%,transparent 28%,rgba(8,12,25,.25) 100%); }
   .signal-section .section-frame { width:100%; position:relative; z-index:1; }
-  .signal-section .section-kicker { color:#b4c9d6; }
-  .signal-content { display:grid; grid-template-columns:1fr 1.2fr; gap:clamp(40px,7vw,120px); align-items:end; min-height:525px; position:relative; opacity:0; transform:translateY(35px); transition:opacity .7s ease,transform .7s ease; }
+  .signal-section .section-kicker { color:#b4c9d6; text-align:right; }
+  .signal-content { display:flex; justify-content:flex-end; align-items:end; min-height:525px; position:relative; opacity:0; transform:translateY(35px); transition:opacity .7s ease,transform .7s ease; }
   .signal-content.is-visible,.pair-layout.is-visible,.rewards-section .section-frame.is-visible,.final-content.is-visible { opacity:1; transform:translateY(0); }
-  .power-readout { align-self:start; max-width:500px; padding:19px 0 0 20px; border-left:1px solid rgba(245,233,223,.42); text-shadow:0 2px 20px rgba(4,8,18,.7); }
-  .power-label,.power-source { display:block; font-size:11px; font-weight:700; letter-spacing:.2em; line-height:1.6; }
-  .power-label { color:#d9c4bf; }
-  .power-before { display:flex; align-items:baseline; gap:14px; margin:8px 0 24px; color:#eab0a2; font-family:'Michroma',sans-serif; white-space:nowrap; }
-  .power-before strong { font-size:clamp(35px,4.6vw,67px); font-weight:400; letter-spacing:-.1em; }
-  .power-before strong span,.power-after span { font-size:.45em; }
-  .power-arrow { font:400 25px/1 'DM Sans',sans-serif; opacity:.65; }
-  .power-bar { width:min(100%,370px); height:9px; padding:2px; border:1px solid rgba(154,232,239,.8); }
-  .power-bar span { display:block; width:100%; height:100%; background:var(--cyan); box-shadow:0 0 24px rgba(154,232,239,.8); transform:scaleX(.01); transform-origin:left; transition:transform 1.5s .5s ease-out; }
-  .signal-content.is-visible .power-bar span { transform:scaleX(1); }
-  .power-source { color:var(--cyan); margin-top:19px; }
-  .power-after { display:block; color:var(--cyan); font:400 clamp(62px,7.7vw,116px)/1.4 'Michroma',sans-serif; letter-spacing:-.1em; opacity:0; transform:translateY(12px); transition:opacity .7s 1s ease,transform .7s 1s ease; }
-  .signal-content.is-visible .power-after { opacity:1; transform:translateY(0); }
+  .story-copy { width:min(100%,570px); text-shadow:0 2px 20px rgba(4,8,18,.75); }
   .story-copy h2,.pair-copy h2,.rewards-section h2,.final-section h2 { font-size:clamp(36px,4.3vw,70px); line-height:1.28; letter-spacing:-.07em; }
   .story-copy h2 { font-size:clamp(33px,3.5vw,56px); }
   .story-copy p { max-width:540px; font-size:clamp(17px,1.5vw,22px); line-height:1.65; color:#ecd9d1; }
@@ -257,6 +250,14 @@ const marscoinFlapUrl = 'https://flap.sh/bnb/0xfe189e97832da1573e4e4ff034f4ffc3a
   .reward-copy .section-kicker { margin-bottom:35px; }
   .reward-copy h2 { margin-bottom:28px; }
   .reward-copy > p:not(.section-kicker) { max-width:520px; color:#dbc8c2; font-size:clamp(17px,1.4vw,21px); line-height:1.63; }
+  .dividend-scenarios { max-width:560px; margin-top:36px; border-top:1px solid rgba(245,219,199,.34); }
+  .dividend-scenarios table { width:100%; border-collapse:collapse; text-align:left; font-variant-numeric:tabular-nums; }
+  .dividend-scenarios caption { padding:19px 0 15px; text-align:left; font-size:11px; line-height:1.5; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:var(--paper); }
+  .dividend-scenarios th { padding:0 0 11px; color:#c6aaa6; font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+  .dividend-scenarios th:last-child,.dividend-scenarios td:last-child { text-align:right; }
+  .dividend-scenarios td { padding:12px 0; border-top:1px solid rgba(245,219,199,.18); font:400 clamp(16px,1.55vw,23px)/1.3 'Michroma',sans-serif; letter-spacing:-.04em; }
+  .dividend-scenarios td:last-child { color:var(--cyan); }
+  .scenario-note { margin-top:13px; max-width:530px; color:#b9aaa9; font-size:11px; line-height:1.55; }
   .reward-asset { margin-top:43px; padding-top:25px; border-top:1px solid var(--line); display:flex; align-items:center; gap:17px; font-size:12px; line-height:1.6; font-weight:700; letter-spacing:.14em; }
   .reward-asset img { width:72px; height:72px; object-fit:contain; }
   .final-section { min-height:820px; display:flex; align-items:center; position:relative; background:radial-gradient(circle at 75% 65%,#b97761 0,#81585b 24%,#46383f 50%,#231e24 85%); overflow:hidden; }
@@ -302,20 +303,16 @@ const marscoinFlapUrl = 'https://flap.sh/bnb/0xfe189e97832da1573e4e4ff034f4ffc3a
     .hero-actions .button { flex:1 1 auto; min-height:49px; padding:0 13px; gap:8px; font-size:9px; }
     .hero-bottom { bottom:20px; left:24px; right:24px; font-size:8px; letter-spacing:.12em; }
     .signal-section { min-height:980px; padding:86px 0 100px; align-items:flex-end; }
-    .blackout-scene { bottom:auto; height:54%; }
-    .blackout-scene img { object-position:34% 55%; }
-    .signal-section::after { background:linear-gradient(0deg,#0c101d 0%,rgba(12,16,29,.98) 38%,rgba(12,16,29,.28) 70%,rgba(12,16,29,.15) 100%); }
+    .blackout-scene { bottom:auto; height:58%; }
+    .blackout-scene img { object-position:43% 55%; }
+    .signal-section::after { background:linear-gradient(0deg,#0c101d 0%,rgba(12,16,29,.98) 34%,rgba(12,16,29,.3) 67%,rgba(12,16,29,.1) 100%); }
     .section-kicker { margin-bottom:50px; font-size:9px; }
-    .signal-content { grid-template-columns:1fr; gap:27px; min-height:0; padding-top:220px; }
-    .power-readout { max-width:100%; padding-top:8px; }
-    .power-before { gap:12px; margin-bottom:14px; }
-    .power-before strong { font-size:clamp(36px,10vw,58px); }
-    .power-after { font-size:clamp(67px,18vw,95px); }
-    .power-label,.power-source { font-size:9px; }
+    .signal-section .section-kicker { text-align:right; }
+    .signal-content { min-height:0; padding-top:330px; }
     .story-copy h2,.rewards-section h2 { font-size:clamp(30px,7.3vw,48px); }
     .story-copy p { font-size:16px; }
     .pair-section { min-height:790px; }
-    .pair-scene img { object-position:69% 42%; }
+    .pair-scene img { object-position:60% 42%; }
     .pair-section::after { background:linear-gradient(0deg,rgba(24,20,25,.98) 0%,rgba(24,20,25,.92) 30%,rgba(24,20,25,.45) 61%,rgba(24,20,25,.08) 100%); }
     .pair-layout { min-height:790px; grid-template-columns:1fr; align-content:end; gap:26px; padding-top:100px; padding-bottom:55px; }
     .pair-copy { align-self:end; }
@@ -332,6 +329,8 @@ const marscoinFlapUrl = 'https://flap.sh/bnb/0xfe189e97832da1573e4e4ff034f4ffc3a
     .reward-number { font-size:clamp(92px,22vw,150px); }
     .reward-copy .section-kicker { margin-bottom:31px; }
     .reward-copy > p:not(.section-kicker) { font-size:16px; }
+    .dividend-scenarios { margin-top:30px; }
+    .dividend-scenarios td { font-size:clamp(14px,4.3vw,20px); }
     .reward-asset { margin-top:30px; }
     .reward-asset img { width:58px; height:58px; }
     .final-section { min-height:780px; padding:100px 0; }
@@ -344,5 +343,5 @@ const marscoinFlapUrl = 'https://flap.sh/bnb/0xfe189e97832da1573e4e4ff034f4ffc3a
   }  @media (max-width:380px) { .header-brand span:last-child { display:none; } .hero h1 { font-size:40px; } .hero-marscoin { font-size:.34em; } .hero-actions { flex-direction:column; } .hero-actions .button { width:100%; } .hero-content { padding-bottom:100px; } }
   .signal-content,.pair-layout,.rewards-section .section-frame,.final-content { opacity:1; transform:none; }
   .has-js .signal-content:not(.is-visible),.has-js .pair-layout:not(.is-visible),.has-js .rewards-section .section-frame:not(.is-visible),.has-js .final-content:not(.is-visible) { opacity:0; transform:translateY(35px); }
-  @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; } .signal-content,.pair-layout,.rewards-section .section-frame,.final-content { opacity:1; transform:none; } .power-bar span { transform:scaleX(1); } .power-after { opacity:1; transform:none; } }
+  @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; } .signal-content,.pair-layout,.rewards-section .section-frame,.final-content { opacity:1; transform:none; } }
 </style>
