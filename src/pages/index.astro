@@ -321,11 +321,11 @@ const marscoinFlapUrl = 'https://flap.sh/bnb/0xfe189e97832da1573e4e4ff034f4ffc3a
   .scenario-note { margin-top:13px; max-width:530px; color:#b9aaa9; font-size:11px; line-height:1.55; }
   .reward-asset { margin-top:43px; padding-top:25px; border-top:1px solid var(--line); display:flex; align-items:center; gap:17px; font-size:12px; line-height:1.6; font-weight:700; letter-spacing:.14em; }
   .reward-asset img { width:72px; height:72px; object-fit:contain; }
-  .expedition-section { position:relative; isolation:isolate; overflow:hidden; padding:65px 0 55px; background:#10151c url('/assets/expedition-backdrop.png') center center/cover no-repeat; border-top:1px solid rgba(233,170,135,.3); }
+  .expedition-section { position:relative; isolation:isolate; overflow:hidden; padding:40px 0 38px; background:#10151c url('/assets/expedition-backdrop.png') center center/cover no-repeat; border-top:1px solid rgba(233,170,135,.3); }
   .expedition-section::before { content:""; position:absolute; inset:0; z-index:-1; pointer-events:none; background:linear-gradient(180deg,rgba(8,11,16,.14) 0%,rgba(8,11,16,.08) 38%,rgba(8,11,16,.22) 100%); }
   .expedition-section::after { content:""; position:absolute; inset:25px 2.5% auto; height:150px; z-index:-1; pointer-events:none; border-top:1px solid rgba(218,126,76,.36); clip-path:polygon(0 25px,25px 0,100% 0,100% 100%,0 100%); opacity:.8; }
   .expedition-inner { max-width:1740px; padding-inline:clamp(20px,3.8vw,72px); position:relative; opacity:0; transform:translateY(35px); transition:opacity .7s ease,transform .7s ease; }
-  .expedition-intro { max-width:1280px; margin:0 auto 38px; text-align:center; }
+  .expedition-intro { max-width:1280px; margin:0 auto 26px; text-align:center; }
   .expedition-intro h2 { display:flex; flex-direction:column; align-items:center; gap:2px; margin:0 0 15px; line-height:1; }
   .expedition-title-main { display:flex; align-items:center; justify-content:center; white-space:nowrap; font:900 clamp(44px,7.3vw,120px)/1 'Orbitron',sans-serif; letter-spacing:-.09em; filter:drop-shadow(0 4px 0 #4d241a) drop-shadow(0 8px 17px rgba(0,0,0,.85)); }
   .expedition-title-main span { background:linear-gradient(180deg,#fff2e5 3%,#eecdb9 33%,#b96a48 68%,#7b3425 96%); -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-stroke:1px rgba(255,231,207,.55); }
@@ -334,9 +334,9 @@ const marscoinFlapUrl = 'https://flap.sh/bnb/0xfe189e97832da1573e4e4ff034f4ffc3a
   .expedition-tagline { margin:0; color:#f2d8c7; font-size:clamp(14px,1.38vw,22px); line-height:1.45; letter-spacing:.18em; text-shadow:0 3px 10px #130e12; }
   .expedition-grid { display:grid; grid-template-columns:minmax(0,2.18fr) minmax(0,.92fr); gap:clamp(12px,1.5vw,24px); align-items:stretch; }
   .expedition-preview { min-width:0; margin:0; filter:drop-shadow(0 0 19px rgba(236,107,42,.45)); }
-  .expedition-preview-frame { position:relative; padding:4px; overflow:hidden; background:linear-gradient(125deg,#ffe0a9 0%,#ed7434 17%,#6a3325 56%,#ffb76d 100%); clip-path:polygon(0 28px,28px 0,calc(100% - 28px) 0,100% 28px,100% calc(100% - 28px),calc(100% - 28px) 100%,28px 100%,0 calc(100% - 28px)); }
+  .expedition-preview-frame { position:relative; aspect-ratio:2.13; overflow:hidden; background:linear-gradient(125deg,#ffe0a9 0%,#ed7434 17%,#6a3325 56%,#ffb76d 100%); clip-path:polygon(0 28px,28px 0,calc(100% - 28px) 0,100% 28px,100% calc(100% - 28px),calc(100% - 28px) 100%,28px 100%,0 calc(100% - 28px)); }
   .expedition-preview-frame::after { content:""; position:absolute; inset:4px; pointer-events:none; box-shadow:inset 0 0 28px rgba(255,157,78,.32); clip-path:polygon(0 25px,25px 0,calc(100% - 25px) 0,100% 25px,100% calc(100% - 25px),calc(100% - 25px) 100%,25px 100%,0 calc(100% - 25px)); }
-  .expedition-preview img { display:block; width:100%; height:auto; aspect-ratio:1672/941; object-fit:cover; clip-path:polygon(0 25px,25px 0,calc(100% - 25px) 0,100% 25px,100% calc(100% - 25px),calc(100% - 25px) 100%,25px 100%,0 calc(100% - 25px)); }
+  .expedition-preview img { position:absolute; inset:4px; display:block; width:calc(100% - 8px); height:calc(100% - 8px); object-fit:cover; object-position:center bottom; clip-path:polygon(0 25px,25px 0,calc(100% - 25px) 0,100% 25px,100% calc(100% - 25px),calc(100% - 25px) 100%,25px 100%,0 calc(100% - 25px)); }
   .expedition-preview figcaption { display:flex; gap:12px; padding:12px 16px 0; color:#e9c7b2; font-size:10px; font-weight:800; letter-spacing:.2em; text-shadow:0 2px 8px #0b0a0d; }
   .expedition-preview figcaption span { color:#ffa668; }
   .expedition-features { display:grid; grid-template-rows:repeat(3,minmax(0,1fr)); gap:clamp(8px,1vw,14px); min-height:0; }
@@ -348,8 +348,8 @@ const marscoinFlapUrl = 'https://flap.sh/bnb/0xfe189e97832da1573e4e4ff034f4ffc3a
   .feature-index { display:block; margin-bottom:10px; color:#f0a87b; font-size:9px; font-weight:800; letter-spacing:.18em; }
   .expedition-feature h3 { margin:0 0 7px; color:#fff0e6; font:800 clamp(15px,1.5vw,24px)/1.12 'DM Sans',sans-serif; letter-spacing:.015em; }
   .expedition-feature p { margin:0; color:#dfc9c0; font-size:clamp(11px,.9vw,14px); line-height:1.37; }
-  .expedition-footer { display:flex; flex-direction:column; align-items:center; gap:12px; margin-top:22px; }
-  .expedition-footer .button { min-width:min(460px,100%); min-height:76px; padding:0 42px; justify-content:center; color:#fff2e8; background:linear-gradient(180deg,rgba(93,41,29,.9),rgba(30,20,20,.92)); border:2px solid #ff9a5e; clip-path:polygon(0 18px,18px 0,calc(100% - 18px) 0,100% 18px,100% calc(100% - 18px),calc(100% - 18px) 100%,18px 100%,0 calc(100% - 18px)); box-shadow:inset 0 0 22px rgba(247,108,47,.2),0 0 28px rgba(255,100,40,.5); font:700 clamp(14px,1.6vw,23px)/1 'Michroma',sans-serif; letter-spacing:.28em; opacity:1; }
+  .expedition-footer { display:flex; flex-direction:column; align-items:center; gap:10px; margin-top:17px; }
+  .expedition-footer .button { min-width:min(460px,100%); min-height:70px; padding:0 42px; justify-content:center; color:#fff2e8; background:linear-gradient(180deg,rgba(93,41,29,.9),rgba(30,20,20,.92)); border:2px solid #ff9a5e; clip-path:polygon(0 18px,18px 0,calc(100% - 18px) 0,100% 18px,100% calc(100% - 18px),calc(100% - 18px) 100%,18px 100%,0 calc(100% - 18px)); box-shadow:inset 0 0 22px rgba(247,108,47,.2),0 0 28px rgba(255,100,40,.5); font:700 clamp(14px,1.6vw,23px)/1 'Michroma',sans-serif; letter-spacing:.28em; opacity:1; }
   .expedition-footer > span { color:#ddb6a0; font-size:9px; font-weight:800; letter-spacing:.22em; text-shadow:0 2px 6px #100d11; }
   .final-section { min-height:820px; display:flex; align-items:center; position:relative; background:radial-gradient(circle at 75% 65%,#b97761 0,#81585b 24%,#46383f 50%,#231e24 85%); overflow:hidden; }
   .final-section::before { content:""; width:210px; aspect-ratio:1; border-radius:50%; position:absolute; right:13%; top:16%; background:#e2b6a0; box-shadow:0 0 90px #cf8f7b; opacity:.7; }
@@ -447,7 +447,7 @@ const marscoinFlapUrl = 'https://flap.sh/bnb/0xfe189e97832da1573e4e4ff034f4ffc3a
     .expedition-title-sub { padding-left:.22em; font-size:clamp(11px,3vw,18px); letter-spacing:.22em; }
     .expedition-tagline { font-size:13px; letter-spacing:.06em; }
     .expedition-grid { gap:16px; }
-    .expedition-preview-frame { padding:3px; }
+    .expedition-preview-frame { aspect-ratio:1672/941; }
     .expedition-preview figcaption { padding:10px 4px 0; font-size:8px; letter-spacing:.09em; }
     .expedition-features { grid-template-columns:1fr; grid-template-rows:repeat(3,146px); gap:9px; }
     .expedition-feature-copy { width:48%; margin-left:50%; padding-right:10px; }
