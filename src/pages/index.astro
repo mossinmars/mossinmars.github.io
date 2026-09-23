@@ -58,6 +58,7 @@ const marscoinFlapUrl = 'https://flap.sh/bnb/0xfe189e97832da1573e4e4ff034f4ffc3a
 
         <section class="signal-section" id="story" aria-labelledby="story-title">
           <div class="blackout-scene" aria-hidden="true"><img src="/assets/moss-recharged.png" alt="" loading="lazy" /></div>
+          <div class="mobile-charge" aria-hidden="true"><span>PWR</span><span class="mobile-charge-bars">▮▮▮▮▮▮▮▮</span><span>100%</span></div>
           <div class="section-frame">
             <p class="section-kicker">01 / THE LAST PERCENT</p>
             <div class="signal-content">
@@ -213,6 +214,7 @@ const marscoinFlapUrl = 'https://flap.sh/bnb/0xfe189e97832da1573e4e4ff034f4ffc3a
   .signal-section { min-height:820px; position:relative; padding:112px 0 126px; background:#0c101d; overflow:hidden; isolation:isolate; display:flex; align-items:center; }
   .blackout-scene { position:absolute; inset:0; z-index:-2; }
   .blackout-scene img { display:block; width:100%; height:100%; object-fit:cover; object-position:48% 58%; filter:brightness(.9) contrast(1.08); }
+  .mobile-charge { display:none; }
   .signal-section::after { content:""; position:absolute; inset:0; z-index:-1; pointer-events:none; background:linear-gradient(90deg,rgba(9,13,25,.3) 0%,rgba(9,13,25,.16) 42%,rgba(9,13,25,.78) 66%,rgba(9,13,25,.9) 100%),linear-gradient(0deg,#10111c 0%,transparent 28%,rgba(8,12,25,.25) 100%); }
   .signal-section .section-frame { width:100%; position:relative; z-index:1; }
   .signal-section .section-kicker { color:#b4c9d6; text-align:right; }
@@ -226,10 +228,10 @@ const marscoinFlapUrl = 'https://flap.sh/bnb/0xfe189e97832da1573e4e4ff034f4ffc3a
   .lore-button { margin-top:18px; }
   .pair-section { min-height:780px; position:relative; isolation:isolate; overflow:hidden; display:flex; align-items:center; color:var(--paper); background:#282027; }
   .pair-scene { position:absolute; inset:0; z-index:-2; }
-  .pair-scene img { width:100%; height:100%; display:block; object-fit:cover; object-position:56% 47%; filter:saturate(.82) brightness(.82); }
-  .pair-section::after { content:""; position:absolute; inset:0; z-index:-1; pointer-events:none; background:linear-gradient(90deg,rgba(24,20,25,.96) 0%,rgba(24,20,25,.78) 36%,rgba(24,20,25,.08) 76%),linear-gradient(0deg,rgba(24,20,25,.78),transparent 27%); }
+  .pair-scene img { width:100%; height:100%; display:block; object-fit:cover; object-position:56% 47%; filter:saturate(.92) brightness(.9); }
+  .pair-section::after { content:""; position:absolute; inset:0; z-index:-1; pointer-events:none; background:linear-gradient(90deg,rgba(13,24,44,.74) 0%,rgba(19,27,44,.68) 36%,rgba(24,20,25,.08) 76%),linear-gradient(0deg,rgba(24,20,25,.78),transparent 27%); }
   .pair-layout { width:100%; min-height:780px; display:grid; grid-template-columns:minmax(0,770px) 1fr; gap:30px; align-items:end; padding-top:135px; padding-bottom:102px; opacity:0; transform:translateY(35px); transition:opacity .7s ease,transform .7s ease; }
-  .pair-copy { align-self:center; }
+  .pair-copy { align-self:center; text-shadow:0 2px 18px rgba(9,12,22,.65); }
   .pair-copy .section-kicker { margin-bottom:36px; color:#d3a99e; }
   .pair-copy h2 { max-width:850px; font-size:clamp(33px,3.4vw,58px); margin-bottom:34px; line-height:1.35; }
   .pair-copy h2 em { font-style:normal; color:var(--sand); }
@@ -304,7 +306,9 @@ const marscoinFlapUrl = 'https://flap.sh/bnb/0xfe189e97832da1573e4e4ff034f4ffc3a
     .hero-bottom { bottom:20px; left:24px; right:24px; font-size:8px; letter-spacing:.12em; }
     .signal-section { min-height:980px; padding:86px 0 100px; align-items:flex-end; }
     .blackout-scene { bottom:auto; height:58%; }
-    .blackout-scene img { object-position:43% 55%; }
+    .blackout-scene img { object-position:30% 55%; }
+    .mobile-charge { display:flex; align-items:center; gap:8px; position:absolute; z-index:2; top:100px; left:24px; padding:8px 10px; border:1px solid #f7bf5e; background:rgba(20,17,19,.76); color:#f7bf5e; font:700 10px/1 'DM Sans',sans-serif; letter-spacing:.12em; box-shadow:0 0 20px rgba(247,191,94,.16); }
+    .mobile-charge-bars { font-size:12px; letter-spacing:-.14em; }
     .signal-section::after { background:linear-gradient(0deg,#0c101d 0%,rgba(12,16,29,.98) 34%,rgba(12,16,29,.3) 67%,rgba(12,16,29,.1) 100%); }
     .section-kicker { margin-bottom:50px; font-size:9px; }
     .signal-section .section-kicker { text-align:right; }
